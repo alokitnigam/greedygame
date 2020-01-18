@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GreedyGame</string>
+    <string name="undo">undo</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="flip_horizontal">Flip Horizontal</string>
+    <string name="flip_vertical">Flip Vertical</string>
+    <string name="opacity">Opacity</string>
+    <string name="add_text_greedy_game">Add text Greedy Game</string>
+    <string name="add_text_and_logo">Add text and Logo</string>
+    <string name="save">Save</string>
+    <string name="image">Image</string>
+</resources>
