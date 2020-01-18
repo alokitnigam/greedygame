@@ -1,6 +1,7 @@
 package com.example.greedygame
 
 import android.content.ContentValues
+import android.content.Intent
 import android.graphics.*
 import android.net.Uri
 import android.os.Bundle
@@ -215,7 +216,6 @@ class OperationsActivity : AppCompatActivity() {
             val values = contentValues()
             values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/" + "GG")
             values.put(MediaStore.Images.Media.IS_PENDING, true)
-            // RELATIVE_PATH and IS_PENDING are introduced in API 29.
 
             val uri: Uri? = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
             if (uri != null) {
@@ -234,9 +234,10 @@ class OperationsActivity : AppCompatActivity() {
             saveImageToStream(bitmap, FileOutputStream(file))
             val values = contentValues()
             values.put(MediaStore.Images.Media.DATA, file.absolutePath)
-            // .DATA is deprecated in API 29
             contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
         }
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
     }
 
     private fun contentValues() : ContentValues {

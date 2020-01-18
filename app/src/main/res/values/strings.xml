@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GreedyGame</string>
+    <string name="app_name">PIXMAN</string>
     <string name="undo">undo</string>
     <string name="pick_image">Pick Image</string>
     <string name="flip_horizontal">Flip Horizontal</string>
